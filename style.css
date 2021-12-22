@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Roboto:wght@400;700;900&display=swap');
+
+:root{
+--softBlue: hsl(215, 51%, 70%);
+--cyan: hsl(178, 100%, 50%);
+--mainBG: hsl(217, 54%, 11%);
+--cardBG: hsl(216, 50%, 16%);
+--line: hsl(215, 32%, 27%);
+--white: hsl(0, 0%, 100%);
+}
+
+body{
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    background-color: var(--mainBG);
+    color:var(--white);
+    padding: 35rem;
+}
+
+img{
+    max-width: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+p{
+    font-weight: 300;
+    color: hsl(0, 0%, 70%);
+}
+
+.attribution{ 
+    font-size: 11px; text-align: center; }
+.attribution a{
+     color: hsl(228, 45%, 44%); }
+
+.main-box{
+    background-color: var(--cardBG);
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px 10px black;
+}
+
+.main-box .main-img{
+    position: relative;
+}
+
+.main-box .main-img__hover{
+    position: absolute;
+    background-color: var(--cyan);
+    width: 100%;
+    height: calc(100% - 5px);
+    top:0;
+    left: 0;
+    opacity: 0;
+
+    transition: all 300ms ease;    
+}
+
+.main-img__hover:hover{
+    opacity: 0.55;
+    cursor: pointer;
+}
+
+.main-img__hover img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h2{
+    font-weight: 900;
+}
+
+h2:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--line);
+}
+
+ul li:nth-child(1){
+    color: var(--cyan);
+}
+
+ul li img{
+    margin-right: 0.5rem;
+}
+
+
+.avatar{
+    width: 20%;
+    border: 3px solid var(--white);
+    border-radius: 50%;
+}
+
+.creator{
+
+    display: flex;
+    align-items: center;
+}
+
+.creator p{
+    padding-left: 1rem;
+}
+
+span{
+    color: var(--white);
+    font-weight: 400;
+}
+span:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+@media(min-width: 500px){
+    .main-box{
+        width: 450px;
+        margin: 0 auto 1rem;
+    }
+}
+
